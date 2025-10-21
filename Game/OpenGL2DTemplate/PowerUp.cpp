@@ -11,7 +11,6 @@ PowerUp::PowerUp(PowerUpType powerType, float startX, float startY, float powerS
 	rotationAngle(0.0f), scaleAnimation(1.0f), pulseAnimation(0.0f),
 	animationTime(0.0f), isVisible(true), isActive(false)
 {
-	// Set colors based on power-up type
 	switch (type) {
 	case PowerUpType::SPEED_BOOST:
 		// Lightning/Speed - Yellow/Orange
@@ -76,7 +75,6 @@ void PowerUp::render() {
 	glRotatef(rotationAngle, 0.0f, 0.0f, 1.0f);
 	glScalef(scaleAnimation, scaleAnimation, 1.0f);
 
-	// Apply pulse effect for time warning
 	float alpha = pulseAnimation;
 
 	switch (type) {
@@ -227,7 +225,7 @@ void PowerUp::collect() {
 
 void PowerUp::activate() {
 	isActive = true;
-	duration = 8.0f;  // Reset duration
+	duration = 8.0f;  
 }
 
 void PowerUp::deactivate() {

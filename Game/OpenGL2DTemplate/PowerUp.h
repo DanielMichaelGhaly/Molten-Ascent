@@ -15,9 +15,9 @@ private:
 	// Properties
 	PowerUpType type;
 	float size;
-	float duration;        // How long power-up lasts when active
-	float lifeTime;        // How long it stays on screen if not collected
-	float remainingLife;   // Time left before disappearing
+	float duration;       
+	float lifeTime;        
+	float remainingLife;   
 	
 	// Colors
 	float primaryColor[3];
@@ -30,7 +30,7 @@ private:
 	float pulseAnimation;
 	float animationTime;
 	bool isVisible;
-	bool isActive;         // When collected and effect is active
+	bool isActive;         
 
 public:
 	// Constructor
@@ -39,7 +39,7 @@ public:
 	// Update and render
 	void update(float deltaTime);
 	void render();
-	void renderActiveEffect();  // Visual cue when power-up is active
+	void renderActiveEffect();  
 
 	// Collection and activation
 	void collect();
