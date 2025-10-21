@@ -1,30 +1,29 @@
 #pragma once
 #include <glut.h>
 
-class Key {
+class Collectable {
 private:
 	// Position
 	float x;
 	float y;
 
 	// Dimensions
-	float keySize;
+	float size;
 	
 	// Colors
-	float keyColor[3];
-	float shineColor[3];
-	float shadowColor[3];
+	float gemColor[3];
+	float sparkleColor[3];
+	float baseColor[3];
 
 	// Animation
 	float rotationAngle;
-	float floatAnimation;
 	float scaleAnimation;
 	float animationTime;
 	bool isVisible;
 
 public:
 	// Constructor
-	Key(float startX, float startY, float size = 25.0f);
+	Collectable(float startX, float startY, float gemSize = 20.0f);
 
 	// Update and render
 	void update(float deltaTime);
@@ -40,7 +39,7 @@ public:
 	// Getters
 	float getX() const { return x; }
 	float getY() const { return y; }
-	float getSize() const { return keySize; }
+	float getSize() const { return size; }
 
 	// Setters
 	void setPosition(float newX, float newY);
