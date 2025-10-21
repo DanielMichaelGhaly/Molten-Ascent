@@ -2,6 +2,8 @@
 #include <glut.h>
 
 class Lava {
+
+private:
 	float x;
 	float y;
 
@@ -18,6 +20,7 @@ class Lava {
 	float bubbleOffset2;
 	float bubbleOffset3;
 
+public:
 	Lava(float screenWidth, float startY = 0.0f, float initialHeight = 1.0f);
 
 	void update(float deltaTime);

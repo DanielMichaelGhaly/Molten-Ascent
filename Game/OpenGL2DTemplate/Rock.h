@@ -3,6 +3,8 @@
 
 // will be a rectangle and on top of it semi-triangle to show irregular shape
 class Rock {
+
+private:
 	float x;
 	float y;
 
@@ -11,7 +13,8 @@ class Rock {
 	float peakHeight;
 
 	float rockColor[3];
-
+	
+public:
 	Rock(float startX, float startY, float width = 40.0f, float height = 30.0f);
 
 	void render();

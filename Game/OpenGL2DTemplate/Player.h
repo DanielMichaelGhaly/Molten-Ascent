@@ -3,6 +3,7 @@
 
 class Player {
 
+private:
 	// Player position
 	float x;
 	float y;
@@ -30,6 +31,7 @@ class Player {
 	float jumpOffset;
 	bool isJumping;
 
+public:
 	Player(float startX, float startY);
 	
 	void update(float deltaTime);
