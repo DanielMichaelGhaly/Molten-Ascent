@@ -22,8 +22,8 @@ private:
 	float lavaBarY;
 	float lavaBarWidth;
 	float lavaBarHeight;
-	float currentLavaHeight;  
-	float maxLavaHeight;      
+	float currentLavaHeight;
+	float maxLavaHeight;
 	float lavaColor[3];
 	float lavaBgColor[3];
 
@@ -33,9 +33,7 @@ private:
 	float scoreY;
 
 public:
-
 	HUD(float screenW, float screenH);
-
 	void render();
 
 	void setLives(int lives);
@@ -45,12 +43,7 @@ public:
 	void setScore(int newScore);
 	void addScore(int points);
 
-	int getLives() const { return currentLives; }
-	float getLavaHeight() const { return currentLavaHeight; }
-	int getScore() const { return score; }
-
 private:
-	// Helper to render hearts and text
 	void renderHeart(float x, float y, float size, bool filled);
 	void renderText(const std::string& text, float x, float y);
 	void renderNumber(int number, float x, float y);

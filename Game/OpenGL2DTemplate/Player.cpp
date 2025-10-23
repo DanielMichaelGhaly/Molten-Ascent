@@ -5,7 +5,7 @@ Player::Player(float startX, float startY)
 	: x(startX), y(startY), vx(0), vy(0),
 	headRadius(15.0f), torsoWidth(20.0f), torsoHeight(30.0f),
 	armWidth(5.0f), armLength(20.0f), legWidth(5.0f), legLength(25.0f),
-	capSize(10.0f), jumpOffset(0.0f), isJumping(false)
+	capSize(10.0f), jumpOffset(0.0f), isJumping(false
 {
 	headColor[0] = 1.0f; headColor[1] = 0.85f; headColor[2] = 0.7f;
 	torsoColor[0] = 0.2f; torsoColor[1] = 0.4f; torsoColor[2] = 0.8f;
@@ -150,7 +150,7 @@ void Player::setPosition(float newX, float newY) {
 }
 
 void Player::setVelocity(float newVX, float newVY) {
-	vx = newVY;
+	vx = newVX;
 	vy = newVY;
 }
 

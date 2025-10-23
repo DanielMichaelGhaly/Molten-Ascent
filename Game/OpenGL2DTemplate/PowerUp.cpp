@@ -232,6 +232,10 @@ void PowerUp::deactivate() {
 	isActive = false;
 }
 
+void PowerUp::remove() {
+	isVisible = false;
+}
+
 bool PowerUp::isColliding(float objX, float objY, float objRadius) const {
 	if (!isVisible) return false;
 

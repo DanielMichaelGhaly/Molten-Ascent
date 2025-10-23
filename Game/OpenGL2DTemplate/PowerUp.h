@@ -3,6 +3,7 @@
 
 enum class PowerUpType {
 	SPEED_BOOST,
+	JUMP_BOOST,
 	SHIELD
 };
 
@@ -15,9 +16,9 @@ private:
 	// Properties
 	PowerUpType type;
 	float size;
-	float duration;       
-	float lifeTime;        
-	float remainingLife;   
+	float duration;        // How long power-up lasts when active
+	float lifeTime;        // How long it stays on screen if not collected
+	float remainingLife;   // Time left before disappearing
 	
 	// Colors
 	float primaryColor[3];
@@ -30,7 +31,7 @@ private:
 	float pulseAnimation;
 	float animationTime;
 	bool isVisible;
-	bool isActive;         
+	bool isActive;         // When collected and effect is active
 
 public:
 	// Constructor
@@ -39,12 +40,13 @@ public:
 	// Update and render
 	void update(float deltaTime);
 	void render();
-	void renderActiveEffect();  
+	void renderActiveEffect();  // Visual cue when power-up is active
 
 	// Collection and activation
 	void collect();
 	void activate();
 	void deactivate();
+	void remove(); // hide without activating
 	bool getIsVisible() const { return isVisible; }
 	bool getIsActive() const { return isActive; }
 	float getRemainingDuration() const { return duration; }
